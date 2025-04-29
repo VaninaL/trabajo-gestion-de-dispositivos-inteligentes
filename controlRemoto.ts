@@ -1,15 +1,25 @@
 
 export class controlRemoto {
     private cantidadPilas:number;
-    private color:string;
-    private tamaño:number; 
+    private tamaño:string; 
+    private estaEncendido:boolean;
 
-
-    encender():void{
-        console.log("Su dispositivo esta encendido");
+    constructor(pCantidadPilas:number,pTamaño:string,pEstaEncendido:boolean) {
+        this.cantidadPilas = pCantidadPilas;
+        this.tamaño = pTamaño;
+        this.estaEncendido = pEstaEncendido;
     }
-    apagar():void{
-        console.log("Su dispositivo esta apagado");        
+
+    encender():boolean {
+        if(this.estaEncendido){
+            return true;            
+        }else{
+            return false;
+        }
+        
+    }
+    apagar():void {         
+    
     }
 };
 

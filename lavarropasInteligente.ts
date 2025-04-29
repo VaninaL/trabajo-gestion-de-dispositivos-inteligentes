@@ -13,7 +13,7 @@ export class lavarropasInteligente extends DispInteligente{
     }
 
     MostrarNombre():void {        
-        console.log(this.nombre) 
+        console.log(this.nombre); 
     }
 
     funcionar(){

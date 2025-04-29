@@ -2,14 +2,22 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.controlRemoto = void 0;
 var controlRemoto = /** @class */ (function () {
-    function controlRemoto() {
+    function controlRemoto(pCantidadPilas, pTamaño, pEstaEncendido) {
+        this.cantidadPilas = pCantidadPilas;
+        this.tamaño = pTamaño;
+        this.estaEncendido = pEstaEncendido;
     }
     controlRemoto.prototype.encender = function () {
-        console.log("Su dispositivo esta encendido");
+        if (this.estaEncendido) {
+            return true;
+        }
+        else {
+            return false;
+        }
     };
     controlRemoto.prototype.apagar = function () {
-        console.log("Su dispositivo esta apagado");
     };
     return controlRemoto;
 }());
 exports.controlRemoto = controlRemoto;
+;

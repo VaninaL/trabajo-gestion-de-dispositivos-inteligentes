@@ -46,5 +46,3 @@ var impresoraInteligente = /** @class */ (function (_super) {
 }(DispositivoInteligente_1.DispInteligente));
 exports.impresoraInteligente = impresoraInteligente;
 ;
-var impresoraVani = new impresoraInteligente("epson", "xp 211", 10);
-impresoraVani.MostrarNombre();

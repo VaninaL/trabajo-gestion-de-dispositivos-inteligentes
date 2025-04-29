@@ -18,9 +18,9 @@ export abstract class DispInteligente implements IConectable{
     protected MostrarInfo():void{
         
     }
-    abstract MostrarNombre()
+    abstract MostrarNombre();
     
-    abstract funcionar()
+    abstract funcionar();
 
     getMostrarInfo():void{
         console.log(`Usted esta usando un dispositivo marca ${this.marca} que corresponde al modelo ${this.modelo}`);

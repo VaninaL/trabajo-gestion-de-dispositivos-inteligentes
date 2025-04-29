@@ -1,22 +1,30 @@
 import { controlRemoto } from "./controlRemoto";
+import { DispInteligente } from "./DispositivoInteligente";
 
-export class televisor{
+export class televisor extends DispInteligente{
     private control:controlRemoto;
-    private marca:string;
-    private tipo:string;
-    private wifi:boolean;    
+    private wifi:boolean;
+    private pulgadas:number;
+    public nombre:string;    
 
-    constructor(pMarca:string,pTipo:string,pWifi:boolean){
-        this.control = new controlRemoto()
+    constructor(pMarca:string,pModelo,pWifi:boolean,pPulgadas:number){
+        super(pMarca,pModelo);
+        this.control = new controlRemoto(2,"mediano",true);
         this.marca = pMarca;
-        this.tipo = pTipo;
         this.wifi = pWifi;
-        
+        this.nombre = "televisor";        
     }
-    encender():void{
-
+    
+    MostrarNombre():void {
+        console.log(this.nombre); 
     }
-    apagar():void{
-
+    
+    funcionar(){
+        if (this.control.encender()){
+            console.log("El televisor esta encendido");            
+        }else{
+            console.log("El televisor esta apagado"); 
+        }
     }
 };
+

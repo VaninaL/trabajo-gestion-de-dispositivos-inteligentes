@@ -6,14 +6,14 @@ export class impresoraInteligente extends DispInteligente{
     public nombre:string;
 
 constructor(pMarca:string,pModelo:string,pCopias:number){
-    super(pMarca,pModelo)
+    super(pMarca,pModelo);
     this.copias = pCopias;
     this.contador = 0;
     this.nombre = "impresora";
     }   
     
     MostrarNombre():void {        
-        console.log(this.nombre) 
+        console.log(this.nombre);
     }
     funcionar(){        
         if(this.contador  <= 100){
@@ -28,5 +28,3 @@ constructor(pMarca:string,pModelo:string,pCopias:number){
         console.log(" Imprimiendo " + this.contador + " copias ");        
     }    
 };
-const impresoraVani:impresoraInteligente = new impresoraInteligente("epson","xp 211",10);
-impresoraVani.MostrarNombre()
